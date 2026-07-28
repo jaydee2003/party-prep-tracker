@@ -1,0 +1,21 @@
+<activity
+    android:name".DetailActivity"
+android:exported="false"/>
+
+<activity
+android:name=".AddItemActivity"
+android:exported="false"/>
+
+<activity
+android:name=".MainActivity"
+android:exported="false"/>
+
+<activity
+android:name=".SplashActivity"
+android:exported="true">
+
+<intent-filter>
+    <action android:name"android.intent.action.main"/>
+    <category android:name="android.intent.category.Launger"/>
+</intent-filter>
+</activity>activity>
