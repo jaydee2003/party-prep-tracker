@@ -1,33 +1,34 @@
 package com.example.partypreptracker
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
-class DetailActivity : A{
+class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detail)
 
         val txtItems = findViewById<TextView>(R.id.txtItems)
-        val btnback = findViewById<Button>(R.id.btnBack)
+        val btnBack = findViewById<Button>(R.id.btnBack)
 
         var output = ""
 
         for (i in DataManager.itemNames.indices) {
+            output += "Item: ${DataManager.itemNames[i]}\n"
+            output += "Category: ${DataManager.categories[i]}\n"
+            output += "Quantity: ${DataManager.quantities[i]}\n"
+            output += "Comments: ${DataManager.comments[i]}\n"
+            output += "__________________________\n\n"
         }
+        
+        txtItems.text = output
 
-        output += "Item:${DataManager.itemNames[i]\n}"
-        output += "category:${DataManager.itemNames[i]\n}"
-        output += "Quantity:${DataManager.itemNames[i]\n}"
-        output += "Comments:${DataManager.itemNames[i]\n}"
-        output += "__________________________\n\n"
+        btnBack.setOnClickListener {
+            finish()
+        }
     }
-    txtItems.text = output
-
-    btnBack.setOnclickListener{
-    finish()
 }

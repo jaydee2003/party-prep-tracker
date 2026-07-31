@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    layout_width="match_parent"
-    layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#F3E5F5"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
-    android:id="@+id/txtTitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Party Prep tracker"
-    android:textSize="28sp"
-    android:textStyle="bold"
-    android:textColor="#6A1B9A"/>
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Party Prep Tracker"
+        android:textColor="#6A1B9A"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
-<TextView
-android:id="@+id/txtTotal"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Total Items:0"
-android:textSize="20sp"
-android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total Items: 0"
+        android:textSize="20sp" />
 
-<Button
-android:id="@+id/btnADD"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="ADD Item"
-android:layout_marginTop="30dp"
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Add Item" />
 
-<Button
-android:id"@+id/btnView"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="view Items"
-android:layout_marginTop="15top"/>
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="View Items" />
 
-</linearLayout>
+</LinearLayout>

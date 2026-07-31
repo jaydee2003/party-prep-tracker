@@ -1,5 +1,6 @@
 package com.example.partypreptracker
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -22,20 +23,18 @@ class MainActivity : AppCompatActivity() {
         btnAdd = findViewById(R.id.btnAdd)
         btnView = findViewById(R.id.btnView)
 
-        txtTotal.text = "Total Items:${DataManager.getTotalItems()}"
+        txtTotal.text = "Total Items: ${DataManager.getTotalItems()}"
 
         btnAdd.setOnClickListener {
-            startActivity(Intent(this, AddItemAvtivity::class.java))
+            startActivity(Intent(this, AddItemActivity::class.java))
         }
         btnView.setOnClickListener {
             startActivity(Intent(this, DetailActivity::class.java))
         }
     }
 
-    overide
-    fun onResume() {
-
+    override fun onResume() {
         super.onResume()
-        txtTotal.text = "Total Items:${DataManager.getTotalItems()}"
+        txtTotal.text = "Total Items: ${DataManager.getTotalItems()}"
     }
 }
